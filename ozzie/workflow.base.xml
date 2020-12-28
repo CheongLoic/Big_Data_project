@@ -17,13 +17,24 @@
     </credential>
   </credentials>
 
-    <start to = "create_csv_table" />
+    <start to = "python-script" />
 
     <!--
         Some HDFS actions could be done bebore.
         For example, you can consider that the file is added to a transit zone in a folder with today's date as name.
         You need to move/copy it to the csv table folder.
     -->
+
+    <action name="python-script">
+        <shell xmlns="uri:oozie:shell-action:0.2">
+          <job-tracker>${jobTracker}</job-tracker>
+          <name-node>${nameNode}</name-node>
+          <exec>script.py</exec>
+	        <file>scripts/projet.py</file>
+        </shell>
+        <ok to="create_csv_table"/>
+        <error to="kill_job"/>
+    </action>
 
     <action name = "create_csv_table" cred="hive-creds">
         <hive2 xmlns = "uri:oozie:hive2-action:0.2">
@@ -41,8 +52,8 @@
         <hive2 xmlns = "uri:oozie:hive2-action:0.2">
             <jdbc-url>${jdbcUrl}</jdbc-url>
             <script>scripts/create_orc_table_covid.hql</script>
-             <param>username=${username}</param>
-               <param>group=${group}</param>
+            <param>username=${username}</param>
+            <param>group=${group}</param>
         </hive2>
         <ok to = "end" />
         <error to = "kill_job" />

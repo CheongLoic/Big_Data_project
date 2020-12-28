@@ -23,7 +23,7 @@ for i in range(len(url_content)):
     Liste.append(l)
     
     
-with open('covid19_DB.csv', 'w', newline='') as csvfile:
+with open('../covid19_DB.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerows(Liste)
 
