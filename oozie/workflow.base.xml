@@ -29,7 +29,7 @@
         <shell xmlns="uri:oozie:shell-action:0.2">
           <job-tracker>${jobTracker}</job-tracker>
           <name-node>${nameNode}</name-node>
-          <exec>script.py</exec>
+          <exec>projet.py</exec>
 	        <file>scripts/projet.py</file>
         </shell>
         <ok to="create_csv_table"/>
@@ -38,7 +38,6 @@
 
     <action name = "create_csv_table" cred="hive-creds">
         <hive2 xmlns = "uri:oozie:hive2-action:0.2">
-            <!-- Complete here -->
             <jdbc-url>${jdbcUrl}</jdbc-url>
             <script>scripts/create_ext_table_covid.hql</script>
             <param>username=${username}</param>

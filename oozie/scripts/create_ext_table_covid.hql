@@ -1,4 +1,5 @@
 SET hivevar:username=loic;
+-- SET hivevar:username=CharleneBruno;
 SET hivevar:group=2;
 
 
