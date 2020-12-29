@@ -2,7 +2,7 @@ SET hivevar:username=loic;
 -- SET hivevar:username=CharleneBruno;
 SET hivevar:group=2;
 
-
+DROP TABLE IF EXISTS  ece_2020_fall_bda_${​​​​group}​​​​.${​​​​username}​​​​_covid19;
 
 CREATE EXTERNAL TABLE IF NOT EXISTS ece_2020_fall_bda_${​​​​group}​​​​.${​​​​username}​​​​_covid19 (
 departement INT,
@@ -15,5 +15,5 @@ deces INT
 )
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 STORED AS TEXTFILE
-LOCATION '/education/ece/big-data/2020/fall/bda/gr${​​​​group}​​​​/${​​​​username}​​​​/project'
+LOCATION '/education/ece/big-data/2020/fall/bda/gr${​​​​group}​​​​/${​​​​username}​​​​/projetBigData'
 TBLPROPERTIES ('skip.header.line.count'='1');

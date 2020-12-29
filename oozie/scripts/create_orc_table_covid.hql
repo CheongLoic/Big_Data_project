@@ -2,6 +2,8 @@ SET hivevar:username=loic;
 -- SET hivevar:username=CharleneBruno;
 SET hivevar:group=2;
 
+DROP TABLE IF EXISTS  ece_2020_fall_bda_${​​​​group}​​​​.${​​​​username}​​​​_covid19_orc;
+
 CREATE TABLE IF NOT EXISTS ece_2020_fall_bda_${​​​​group}​​​​.${​​​​username}​​​​_covid19_orc (
 departement INT,
 sexe INT,
