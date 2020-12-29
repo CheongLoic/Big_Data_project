@@ -3,7 +3,7 @@
 """
 Created on Mon Dec 28 14:01:19 2020
 
-@author: Loic CHEONG
+@author: Loic CHEONG, Charlène Bruno
 """
 import requests
 import csv
@@ -35,6 +35,7 @@ with open("covid19_DB.csv", 'w', newline='') as csvfile:
 file_name = "covid19_DB.csv"
 hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/loic/projetBigData'
 #hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/CharleneBruno/projetBigData'
+#hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/gauthier/projetBigData'
 
 #Create a directoty in HDFS
 #mkdir = Popen(["hdfs", "dfs", "-mkdir", hdfs_path], stdin=PIPE, bufsize=-1)
