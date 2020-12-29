@@ -1,7 +1,7 @@
 # A propos
 Ceci est un projet scolaire d'ECE Paris en Big Data Ecosystem. 
 Ce projet fait de l'auto-ingestion de données csv du Covid19 grâce à Oozie.
-Il existe déjà un job qui s'exécute qui met à jour les données de 2020-12-29 à 18h de  2021-02-15 à 21h
+Il existe déjà un job qui s'exécute qui met à jour les données de 2020-12-29 à 18h au 2021-02-15 à 21h
 
 Auteurs:
 - BRUNO Charlène (charlene.bruno@edu.ece.fr)
@@ -42,17 +42,30 @@ Modifier les fichiers avec la commande `vim <nom_du_fichier>`
 
 
 ## Lancer Oozie
-> hdfs dfs -put -f oozie/ "/user/<username>"  (exemple: hdfs dfs -put -f oozie/ "/user/gauthier")
-> oozie job -run -config oozie/job.properties -oozie http://oozie-1.au.adaltas.cloud:11000/oozie
+- `hdfs dfs -put -f oozie/ "/user/<username>"`  (exemple: `hdfs dfs -put -f oozie/ "/user/gauthier"`)
+- `oozie job -run -config oozie/job.properties -oozie http://oozie-1.au.adaltas.cloud:11000/oozie`
 
 
 ## Vérification
+1. EN CLI
 Pour vérifier le status du job, copier le job_ID, puis exécuter `oozie job -info <job_ID> -oozie http://oozie-1.au.adaltas.cloud:11000/oozie`
+
+<p align="center">
+  <img src="img/job_status_CLI.PNG">
+</p>
 
 Pour arrêter un coordination job: `oozie job -oozie http://oozie-1.au.adaltas.cloud:11000/oozie -kill <Coord_job_ID>`
 
-# Visualiser les données
-## Hive
 
+2. Oozie Web Console
+Pour cela, télécharger Kerbereos et générer un ticket en suivant les étapes dans ce lien https://www.adaltas.com/en/2019/11/04/windows-krb5-client-spnego/
+
+Ouvrir http://oozie-1.au.adaltas.cloud:11000/oozie sur Firefox
+
+<p align="center">
+  <img src="img/job_status_web.PNG">
+</p>
+
+# Visualiser les données
 ## Zeppelin
 Aller sur http://zep-1.au.adaltas.cloud:9995/#/notebook/2FWHFDFTV
