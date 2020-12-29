@@ -1,6 +1,6 @@
-SET hivevar:username=loic;
+-- SET hivevar:username=loic;
 -- SET hivevar:username=CharleneBruno;
--- SET hivevar:username=gauthier;
+SET hivevar:username=gauthier;
 SET hivevar:group=2;
 
 DROP TABLE IF EXISTS  ece_2020_fall_bda_${​​​​group}​​​​.${​​​​username}​​​​_covid19;

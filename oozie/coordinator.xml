@@ -2,9 +2,9 @@
     start="2020-12-29T18:00Z" end="2021-02-15T21:00Z" timezone="Europe/Paris" xmlns="uri:oozie:coordinator:0.5">
    <action>
       <workflow>
-         <app-path>hdfs://au/user/l.cheong-ece/oozie/workflow.base.xml</app-path>
+         <!--<app-path>hdfs://au/user/l.cheong-ece/oozie/workflow.base.xml</app-path>-->
          <!--<app-path>hdfs://au/user/c.bruno-ece/oozie/workflow.base.xml</app-path>-->
-         <!--<app-path>hdfs://au/user/gauthier/oozie/workflow.base.xml</app-path>-->
+         <app-path>hdfs://au/user/gauthier/oozie/workflow.base.xml</app-path>
       </workflow>
    </action>
 </coordinator-app>
