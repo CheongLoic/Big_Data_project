@@ -47,7 +47,8 @@ Modifier les fichiers avec la commande `vim <nom_du_fichier>`
 
 
 ## Vérification
-1. EN CLI
+1. En CLI
+
 Pour vérifier le status du job, copier le job_ID, puis exécuter `oozie job -info <job_ID> -oozie http://oozie-1.au.adaltas.cloud:11000/oozie`
 
 <p align="center">
@@ -58,6 +59,7 @@ Pour arrêter un coordination job: `oozie job -oozie http://oozie-1.au.adaltas.c
 
 
 2. Oozie Web Console
+
 Pour cela, télécharger Kerbereos et générer un ticket en suivant les étapes dans ce lien https://www.adaltas.com/en/2019/11/04/windows-krb5-client-spnego/
 
 Ouvrir http://oozie-1.au.adaltas.cloud:11000/oozie sur Firefox
