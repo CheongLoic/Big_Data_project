@@ -19,7 +19,7 @@ url_content = url_content.replace('"','')
 url_content = url_content.replace(';',',')
 url_content = url_content.split("\\n")
 del url_content[-1]
-url_content[0] = "departement,sexe,jour,hospitalisation,reanimation,guerison,mort"
+url_content[0] = "departement,sexe,jour,hospitalisation,reanimation,guerison,deces"
 
 Liste = []
 for i in range(len(url_content)):
@@ -33,9 +33,9 @@ with open("covid19_DB.csv", 'w', newline='') as csvfile:
 
 # define path to saved file
 file_name = "covid19_DB.csv"
-hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/loic/projetBigData/covid19_data'
+#hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/loic/projetBigData/covid19_data'
 #hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/CharleneBruno/projetBigData/covid19_data'
-#hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/gauthier/projetBigData/covid19_data'
+hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/gauthier/projetBigData/covid19_data'
 
 #Create a directoty in HDFS
 #mkdir = Popen(["hdfs", "dfs", "-mkdir", hdfs_path], stdin=PIPE, bufsize=-1)

@@ -1,6 +1,6 @@
-SET hivevar:username=loic;
+-- SET hivevar:username=loic;
 -- SET hivevar:username=CharleneBruno;
--- SET hivevar:username=gauthier;
+SET hivevar:username=gauthier;
 SET hivevar:group=2;
 
 DROP TABLE IF EXISTS  ece_2020_fall_bda_${​​​​group}​​​​.${​​​​username}​​​​_covid19_parquet;
@@ -15,7 +15,7 @@ guerison INT,
 deces INT
 )
 STORED AS PARQUET
-LOCATION '/education/ece/big-data/2020/fall/bda/gr2/loic/projetBigData/parquet_files';
+LOCATION '/education/ece/big-data/2020/fall/bda/gr${​​​​group}​​​​/${​​​​username}/projetBigData/parquet_files';
 
 
 INSERT INTO ece_2020_fall_bda_​${​​​​group}.${​​​​username}​​​​_covid19_parquet

@@ -1,7 +1,9 @@
 # A propos
 Ceci est un projet scolaire d'ECE Paris en Big Data Ecosystem. 
 Ce projet fait de l'auto-ingestion de données csv du Covid19 grâce à Oozie.
-Il existe déjà un job qui s'exécute qui met à jour les données de 2020-12-29 à 18h au 2021-02-15 à 21h
+Il existe déjà un job qui s'exécute qui met à jour les données de 2020-12-29 à 18h au 2021-02-15 à 20h.
+
+Le rapport explicatif du projet est présent à la racine du repository.
 
 Auteurs:
 - BRUNO Charlène (charlene.bruno@edu.ece.fr)
@@ -30,7 +32,7 @@ Une fois votre session ouverte ![alt test](img/session.PNG)
 Modifier les fichiers avec la commande `vim <nom_du_fichier>`
 
 ```diff
-- Note: Le professeur n'a pas besoin de faire cet étape ! Le code soumis a été écrit de tel façon qu'il face le moins de travail possible
+- Note: Le professeur n'a pas besoin de faire cette étape ! Le code soumis a été écrit de telle façon qu'il fasse le moins de travail possible
 ```
 
 
@@ -43,7 +45,7 @@ Modifier les fichiers avec la commande `vim <nom_du_fichier>`
 - `cd Big_Data_project/oozie/scripts` ou `cd scripts`
 - projet.py: changer *hdfs_path*
 - create_ext_table_covid.hql: remplacer la variable *username* et supprimer les ![alt test](img/at_symbol.PNG) 
-- create_orc_table_covid.hql: remplacer la variable *username* et supprimer les ![alt test](img/at_symbol.PNG) 
+- create_parquet_table_covid.hql: remplacer la variable *username* et supprimer les ![alt test](img/at_symbol.PNG) 
 
 
 ## Lancer Oozie
