@@ -27,10 +27,9 @@ Une fois votre session ouverte ![alt test](img/session.PNG)
 ## Apporter les modifications necessaires
 Modifier les fichiers avec la commande `vim <nom_du_fichier>`
 
-<span class="float-left text-red tooltipped tooltipped-n" aria-label="Does not meet accessibility standards"><%= octicon("alert") %></span>
-<div class="text-orange-light mb-2">
-  Note: Le professeur n'a pas besoin de faire cet étape ! Le code soumis a été écrit de tel façon qu'il face le moins de travail possible
-</div>
+```diff
+- Note: Le professeur n'a pas besoin de faire cet étape ! Le code soumis a été écrit de tel façon qu'il face le moins de travail possible
+```
 
 
 1. Dans le fichier **oozie**
