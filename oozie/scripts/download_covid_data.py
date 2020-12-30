@@ -33,9 +33,9 @@ with open("covid19_DB.csv", 'w', newline='') as csvfile:
 
 # define path to saved file
 file_name = "covid19_DB.csv"
-#hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/loic/projetBigData'
-#hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/CharleneBruno/projetBigData'
-hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/gauthier/projetBigData'
+hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/loic/projetBigData/covid19_data'
+#hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/CharleneBruno/projetBigData/covid19_data'
+#hdfs_path =  '/education/ece/big-data/2020/fall/bda/gr2/gauthier/projetBigData/covid19_data'
 
 #Create a directoty in HDFS
 #mkdir = Popen(["hdfs", "dfs", "-mkdir", hdfs_path], stdin=PIPE, bufsize=-1)

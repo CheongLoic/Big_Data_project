@@ -22,7 +22,9 @@ Activer *OpenVPN Connect* pour pouvoir vous connecter à votre session sur l'inv
 
 Une fois votre session ouverte ![alt test](img/session.PNG) 
 - Cloner le projet localement : `git clone https://github.com/CheongLoic/Big_Data_project.git`
-- Créer un fichier *projetBigData* en hdfs: `hdfs dfs -mkdir <hdfs_path>` (exemple: `hdfs dfs -mkdir /education/ece/big-data/2020/fall/bda/gr2/gauthier/projetBigData` )
+- Créer un dossier *projetBigData* en hdfs: `hdfs dfs -mkdir <hdfs_path>` (exemple: `hdfs dfs -mkdir /education/ece/big-data/2020/fall/bda/gr2/gauthier/projetBigData` )
+- De la même manière, créer deux sous-dossiers *covid19_data* et *parquet_files* dans *projetBigData* en hdfs
+
 
 ## Apporter les modifications necessaires
 Modifier les fichiers avec la commande `vim <nom_du_fichier>`

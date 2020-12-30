@@ -31,8 +31,8 @@
             </property>
           </configuration>
           <exec>python3</exec>
-          <argument>projet.py</argument>
-	        <file>scripts/projet.py</file>
+          <argument>download_covid_data.py</argument>
+	        <file>scripts/download_covid_data.py</file>
         </shell>
         <ok to="create_csv_table"/>
         <error to="kill_job"/>
@@ -45,14 +45,14 @@
             <param>username=${username}</param>
             <param>group=${group}</param>
         </hive2>
-        <ok to = "create_orc_table" />
+        <ok to = "create_parquet_table" />
         <error to = "kill_job" />
     </action>
 
-    <action name = "create_orc_table" cred="hive-creds">
+    <action name = "create_parquet_table" cred="hive-creds">
         <hive2 xmlns = "uri:oozie:hive2-action:0.2">
             <jdbc-url>${jdbcUrl}</jdbc-url>
-            <script>scripts/create_orc_table_covid.hql</script>
+            <script>scripts/create_parquet_table_covid.hql</script>
             <param>username=${username}</param>
             <param>group=${group}</param>
         </hive2>
