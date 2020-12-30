@@ -21,13 +21,17 @@ Activer *OpenVPN Connect* pour pouvoir vous connecter à votre session sur l'inv
 </p>
 
 Une fois votre session ouverte ![alt test](img/session.PNG) 
-- cloner le projet localement : `git clone https://github.com/CheongLoic/Big_Data_project.git`
+- Cloner le projet localement : `git clone https://github.com/CheongLoic/Big_Data_project.git`
 - Créer un fichier *projetBigData* en hdfs: `hdfs dfs -mkdir <hdfs_path>` (exemple: `hdfs dfs -mkdir /education/ece/big-data/2020/fall/bda/gr2/gauthier/projetBigData` )
 
 ## Apporter les modifications necessaires
 Modifier les fichiers avec la commande `vim <nom_du_fichier>`
 
-**Note: Le professeur n'a pas besoin de faire cet étape ! Le code soumis a été écrit de tel façon qu'il face le moins de travail possible**
+<span class="float-left text-red tooltipped tooltipped-n" aria-label="Does not meet accessibility standards"><%= octicon("alert") %></span>
+<div class="text-orange-light mb-2">
+  Note: Le professeur n'a pas besoin de faire cet étape ! Le code soumis a été écrit de tel façon qu'il face le moins de travail possible
+</div>
+
 
 1. Dans le fichier **oozie**
 - `cd Big_Data_project/oozie`
@@ -60,7 +64,7 @@ Pour arrêter un coordination job: `oozie job -oozie http://oozie-1.au.adaltas.c
 
 2. Oozie Web Console
 
-Pour cela, télécharger Kerbereos et générer un ticket en suivant les étapes dans ce lien https://www.adaltas.com/en/2019/11/04/windows-krb5-client-spnego/
+Pour cela, télécharger Kerberos et générer un ticket en suivant les étapes dans ce lien https://www.adaltas.com/en/2019/11/04/windows-krb5-client-spnego/
 
 Ouvrir http://oozie-1.au.adaltas.cloud:11000/oozie sur Firefox
 

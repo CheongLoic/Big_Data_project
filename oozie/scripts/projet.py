@@ -19,7 +19,7 @@ url_content = url_content.replace('"','')
 url_content = url_content.replace(';',',')
 url_content = url_content.split("\\n")
 del url_content[-1]
-url_content[0] = "dep,sexe,jour,hosp,rea,rad,dc"
+url_content[0] = "département,sexe,jour,hospitalisation,réanimation,guérison,mort"
 
 Liste = []
 for i in range(len(url_content)):
