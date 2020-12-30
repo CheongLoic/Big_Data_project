@@ -30,3 +30,5 @@ FROM  ece_2020_fall_bda_${​​​​group}.${​​​​username}​​​​
 WHERE departement>=01 AND departement<=976;
 
 -- describe formatted ece_2020_fall_bda_${​​​​group}​​​​.${​​​​username}​​​​_covid19_parquet; 
+-- show tables in ece_2020_fall_bda_2;
+-- drop table ece_2020_fall_bda_2​​​​.loic_covid19_parquet;
